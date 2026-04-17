@@ -17,8 +17,6 @@ function App() {
       {path:'addtask',element: <ProtectedRoute><AddTask/></ProtectedRoute> },
       {path:'mytasks',element:<ProtectedRoute><MyTasks/></ProtectedRoute> },
       {path:'updatetask/:id',element:<UpdateTask/> },
-      {path:'/forgot-password',element:<ForgotPassword />},
-      {path:'/reset-password/:token',element:<ResetPassword />},
       {path:'register',element:<Register/>},
       {path:'login',element:<Login/>},
       {path:'*',element:<NotFound/>}
