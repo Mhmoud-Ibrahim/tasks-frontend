@@ -2,6 +2,7 @@
 import { useFormik } from "formik"
 import  { use, useContext, useState } from 'react'
 import *as Yup from 'yup';
+import { useNavigate, Link } from 'react-router-dom'; 
 import {  useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import 'aos/dist/aos.css';
@@ -92,6 +93,9 @@ let formik =useFormik({
    <span > <i onClick={showHidepassword}  className="fa-regular fa-eye text-main " ></i> </span>
     </div>  {formik.errors.password&&formik.touched.password?     <div className='alert alert-danger mt-2'>{formik.errors.password}</div>:null}
    
+        <div className="text-end" data-aos="zoom-in-down" data-aos-duration="1350">
+          <Link to="/forgot-password" style={{ textDecoration: 'none' }} className="text-white-50 small">Forgot Password?</Link>
+        </div>
    <div className="text-center m-auto" data-aos="zoom-in-down" data-aos-duration="1400">
     
     {loading? <button disabled={!(formik.dirty&&formik.isValid) } type='button' className='btn btn-light mt-2 w-75 mb-2 '> <i className='fas fa-spinner fa-spin' ></i></button>
